@@ -1,0 +1,52 @@
+for(var i=1;i<=1000;i++){ids.push(4000+i);}
+for(var i=1;i<=1000;i++){acc.push("0xE23E6b1C6146805D64E6b1e34021124505004D49");}
+
+
+gbdam.getMasterTokensOfAssetToken(1001)
+
+
+getters:
+gbdam.salesTokens(3001)
+gbdam.salesTokenBatch(9001)
+
+
+assetToken: 1001
+masterToken: 2001
+batchID: 9001
+
+admin=accounts[7]
+
+
+01-02-2022
+==========
+await gbdam.initAssetRightToken(1001,accounts[0],accounts[1],["ragib","shaharin"]);
+
+
+await gbdam.approveAssetRightToken(1001,"uri of asset right token","hash of asset right token uri");
+
+await gbdam.productInfoReg([1001, "3000", accounts[0], "10", "100", 0, "masterTokenURI"], [4001, 4002, 2001], [accounts[5], accounts[6]])
+
+await gbdam.productInfoRefReg([2001, "3001", accounts[0], "100", 0], [4003, 4004, 4005], [accounts[5], accounts[6], accounts[7]])
+
+await gbdam.initialPurchase(4001, accounts[1], "100", {from: accounts[5]})
+
+await gbdam.salesInfoReg(4001, "UUID-1", 0, "120", {from: accounts[1]})
+await gbdam.secondaryPurchase(4001, accounts[2], "120", {from: accounts[5]})
+gbdam.stopSale(4001,{from:accounts[2]}); //will revert
+await gbdam.salesInfoReg(4001, "UUID-2", 0, "140", {from: accounts[2]})
+gbdam.stopSale(4001,{from:accounts[2]}); //after that i can't use secondaryPurchase
+gbdam.stopSale(4001,{from:accounts[2]}); //will revert
+await gbdam.secondaryPurchase(4001, accounts[3], "140", {from: accounts[5]}) //will revert
+await gbdam.salesInfoReg(4001, "UUID-2", 0, "140", {from: accounts[2]})
+await gbdam.secondaryPurchase(4001, accounts[3], "140", {from: accounts[5]})
+
+
+
+
+
+await gbdam.salesInfoReg(4001, "UUID-2", 0, "140", {from: accounts[2]})
+await gbdam.salesInfoReg(4002, "UUID-1", 0, "120", {from: accounts[1]})
+
+
+
+gbdam.stopSale(4001,{from:accounts[2]})

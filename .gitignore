@@ -1,0 +1,15 @@
+.openzeppelin
+node_modules
+.vscode
+test/.gitkeep
+package-lock.json
+flat_main.sol
+fucntionSignatures.json
+fucntionSignaturesSetter.json
+.secret
+text.txt
+build
+index.js
+revert.js
+helper/flat_main.sol
+

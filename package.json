@@ -1,0 +1,27 @@
+{
+    "name": "gdams-dev",
+    "version": "1.0.0",
+    "description": "upgradeable smart contract development for gonzo digital asset management system.",
+    "main": "truffle-config.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "BJIT",
+    "license": "MIT",
+    "dependencies": {
+        "@openzeppelin/contracts": "^4.3.2",
+        "@openzeppelin/contracts-upgradeable": "^4.3.2",
+        "@openzeppelin/truffle-upgrades": "^1.10.0",
+        "@truffle/hdwallet-provider": "^1.5.0",
+        "axios": "^0.24.0",
+        "chai": "^4.3.4",
+        "mocha": "^9.1.1",
+        "web3": "^1.7.0"
+    },
+    "devDependencies": {
+        "@openzeppelin/truffle-upgrades": "^1.10.0",
+        "prettier": "^2.4.1",
+        "prettier-plugin-solidity": "^1.0.0-beta.18"
+    }
+}
